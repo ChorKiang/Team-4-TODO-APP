@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f6f4ef;
+  --panel: #fffdf8;
+  --line: #d9d2c0;
+  --ink: #1f1a12;
+  --muted: #6f644f;
+  --accent: #c96f27;
+  --accent-soft: #f8e9dc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 5% 10%, #f7debb 0, transparent 30%),
+    radial-gradient(circle at 85% 90%, #f2d0bc 0, transparent 35%),
+    var(--bg);
+  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.04);
+}
+
+.input, .select, .textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.55rem 0.75rem;
+  font-size: 0.95rem;
+  background: #fff;
+}
+
+.btn {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 0.5rem 0.9rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-secondary {
+  background: white;
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+.btn-danger {
+  background: #b42318;
+  color: white;
+}
+
+.fade-in {
+  animation: fadeIn 280ms ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
